@@ -1,0 +1,113 @@
+header {
+	position: fixed;
+	z-index: 1000;
+	@include flex(row, center);
+	width: 100%;
+	@include header-footer-spacing;
+
+	& .brand-logo {
+		width: 162px;
+		height: 40px;
+		margin-right: auto;
+		cursor: pointer;
+
+		& img {
+			width: 100%;
+			transition: opacity 150ms ease-in-out;
+		}
+
+		&:hover img {
+			opacity: 0.8;
+		}
+	}
+
+	& nav {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 650px;
+	}
+
+	& .nav-list {
+		padding: 0px;
+
+		@include menu-mq {
+			display: none;
+		}
+
+		@include mq(md) {
+			@include flex(row, center, center);
+		}
+
+		& .nav-list-item {
+			list-style-position: inside;
+			list-style: none;
+			margin: 0.5rem 1rem;
+
+			&:after {
+				display: block;
+				content: "";
+				border-bottom: 2px solid $clr-white;
+				transform: scaleX(0);
+				transition: transform 200ms ease-in-out;
+				transform-origin: 100% 50%;
+			}
+
+			&:hover:after {
+				transform: scaleX(1);
+				transform-origin: 0% 50%;
+			}
+		}
+		& .nav-link {
+			letter-spacing: 0.42px;
+			color: $clr-white;
+			text-decoration: none;
+			font-weight: $fw-light;
+		}
+	}
+
+	& .nav-btns {
+		@include flex(row, center);
+		margin-left: auto;
+		height: 40px;
+
+		.btn-search {
+			position: relative;
+			@include btn-menu;
+			background-image: url("../assets/ic-search.svg");
+			cursor: pointer;
+
+			& .input-search {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: translate(-110%, 0%);
+				width: 0px;
+				transition: width 200ms ease-in-out, opacity 150ms ease-in-out;
+				padding: 0.5rem 1rem;
+				background-color: rgba($clr-white, 0.25);
+				border: none;
+				color: white;
+				letter-spacing: 1.2px;
+
+				&.active {
+					opacity: 1;
+					width: 180px;
+
+					&:focus {
+						outline: none;
+						box-shadow: -2px 2px 0px 0px rgba($clr-white, 0.6);
+					}
+				}
+			}
+		}
+
+		.btn-menu {
+			@include btn-menu;
+			background-image: url("../assets/ic-burger-menu.svg");
+			margin-left: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,137 @@
+$hero-margins: 1rem;
+
+.slider {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	@include flex(column, center, center);
+	background-image: url("../assets/bg-image-1.jpg");
+	background-size: cover;
+	background-position-x: center;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($clr-black, 0.5);
+	}
+
+	&-mask {
+	}
+
+	.slide {
+		display: none;
+		position: relative;
+		z-index: 500;
+		color: $clr-white;
+	}
+
+	.slide.active {
+		display: block;
+	}
+
+	.hero {
+		@include flex(column, center, center);
+	}
+
+	.hero-header {
+		font-size: clamp(14px, 1.2vw, 19px);
+		font-weight: 400;
+		letter-spacing: 5.6px;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	.hero-title {
+		font-size: clamp(20px, 10vw, 60px);
+		font-weight: $fw-bolder;
+		text-align: center;
+		line-height: clamp(37px, 12vw, 65px);
+		max-width: 70vw;
+		margin-bottom: calc(#{$hero-margins} * 2.2);
+	}
+
+	.hero-btn {
+		text-transform: uppercase;
+		background: none;
+		border: 2px solid $clr-white;
+		width: clamp(100px, 50vw, 160px);
+		height: 45px;
+		@include flex(column, center, center);
+		color: $clr-white;
+		letter-spacing: 0.39px;
+		transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			box-shadow: inset 2px 2px 0px 0px $clr-white, 4px 4px 0px 0px gray,
+				inset 190px 0px 0px rgba($clr-white, 1);
+			color: $clr-black;
+			font-weight: $fw-bold;
+		}
+	}
+}
+
+.pointers {
+	position: absolute;
+	bottom: 0;
+	z-index: 60;
+	transform: translateY(-13vh);
+	@include flex(row, center, space-between);
+}
+
+@mixin pointer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	content: "";
+	display: block;
+}
+
+@mixin pointerTranstition {
+	$time: 150ms;
+	transition: width $time ease-in-out, height $time ease-in-out,
+		background-color $time ease-in-out;
+}
+
+.pointer {
+	position: relative;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+
+	&:after {
+		@include pointer;
+		@include pointerTranstition;
+	}
+
+	&:before {
+		@include pointer;
+		@include pointerTranstition;
+		background-color: rgba($clr-white, 0.3);
+	}
+
+	&.active:after {
+		background-color: $clr-white;
+		width: 14px;
+		height: 14px;
+	}
+
+	&:hover:not(.active)::before {
+		width: 20px;
+		height: 20px;
+	}
+
+	&:hover:not(.active)::after {
+		background-color: $clr-white;
+	}
+}

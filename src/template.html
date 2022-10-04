@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="" />
+		<title><%=htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<header>
+			<div class="brand-logo">
+				<img src="./assets/logo-oblack.png" alt="" />
+			</div>
+			<nav>
+				<ul class="nav-list">
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Inicio</a>
+					</li>
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Productos</a>
+					</li>
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Sobre Barmetal</a>
+					</li>
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Distribuidores</a>
+					</li>
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Tiendas</a>
+					</li>
+					<li class="nav-list-item">
+						<a class="nav-link" href="">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="nav-btns">
+				<button id="btn-search" class="btn-search" type="button">
+					<input
+						id="search"
+						name="search"
+						class="input-search"
+						type="text"
+					/>
+				</button>
+				<button class="btn-menu" type="button"></button>
+			</div>
+		</header>
+		<main class="slider">
+			<section id="slide-1" class="slide">
+				<div class="hero">
+					<h4 class="hero-header">productos exclusivos</h4>
+					<h1 class="hero-title">Premium collection</h1>
+					<button class="hero-btn">Descubrir</button>
+				</div>
+			</section>
+			<section id="slide-2" class="slide active">
+				<div class="hero">
+					<h4 class="hero-header">productos exclusivos</h4>
+					<h1 class="hero-title">Premium collection</h1>
+					<button class="hero-btn">Descubrir</button>
+				</div>
+			</section>
+			<section id="slide-3" class="slide">
+				<div class="hero">
+					<h4 class="hero-header">productos exclusivos</h4>
+					<h1 class="hero-title">Premium collection</h1>
+					<button class="hero-btn">Descubrir</button>
+				</div>
+			</section>
+			<div class="pointers">
+				<div data-pointer="1" class="pointer"></div>
+				<div data-pointer="2" class="pointer active"></div>
+				<div data-pointer="3" class="pointer"></div>
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				<span>2020 ® Barmetal | Aberturas</span>
+				<span>Todos los derechos reservados.</span>
+			</div>
+			<div class="footer-btn">
+				<button class="btn-mouse-hint"></button>
+			</div>
+		</footer>
+	</body>
+</html>

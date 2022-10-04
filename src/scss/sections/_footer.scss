@@ -1,0 +1,39 @@
+footer {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	@include flex(row, center, start);
+	@include header-footer-spacing;
+
+	@include mq(md) {
+		justify-content: space-between;
+	}
+
+	& .copyright {
+		color: $clr-light-gray;
+
+		& span:first-child {
+			display: block;
+			color: $clr-white;
+		}
+	}
+
+	& .footer-btn {
+		display: none;
+
+		@include mq(md) {
+			display: block;
+		}
+
+		& .btn-mouse-hint {
+			border: none;
+			background: none;
+			background-image: url("../assets/ic-mouse-hint.svg");
+			width: 37px;
+			height: 62px;
+		}
+	}
+}

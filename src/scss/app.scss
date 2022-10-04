@@ -1,0 +1,11 @@
+//General
+@import "./general/reset";
+@import "./general/breakpoints";
+@import "./general/variables";
+@import "./general/fonts";
+@import "./general/mixins";
+
+//Sections
+@import "./sections/header";
+@import "./sections/slider";
+@import "./sections/footer";
