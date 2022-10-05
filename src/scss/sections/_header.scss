@@ -91,7 +91,12 @@ header {
 				border: none;
 				color: white;
 				letter-spacing: 1.2px;
-
+				@include mq(md) {
+					transform: translate(-65%, 100%);
+				}
+				@include mq(lg) {
+					transform: translate(-110%, 0%);
+				}
 				&.active {
 					opacity: 1;
 					width: 180px;
