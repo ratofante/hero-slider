@@ -1,6 +1,7 @@
 import './scss/app.scss';
 
 import slider from './js/slider';
+import menu from './js/menu';
 
 document.addEventListener('DOMContentLoaded', () => {
    const searchInput = document.querySelector('#search');
@@ -15,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
    })
 
    slider();
+   menu();
 
 })

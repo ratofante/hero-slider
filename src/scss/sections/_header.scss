@@ -21,7 +21,7 @@ header {
 		}
 	}
 
-	& nav {
+	& nav.top-nav {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -111,8 +111,64 @@ header {
 
 		.btn-menu {
 			@include btn-menu;
-			background-image: url("../assets/ic-burger-menu.svg");
+			cursor: pointer;
+			background-image: url("../assets/ic-close-menu.svg");
 			margin-left: 1.5rem;
+
+			&.open {
+				background-image: url("../assets/ic-burger-menu.svg");
+			}
+		}
+	}
+
+	.menu {
+		position: relative;
+		isolation: isolate;
+		z-index: 2000;
+	}
+	.menu-nav {
+		position: absolute;
+		top: 0;
+		background-color: rgba($clr-dark-gray, 0.2);
+		transform: translate(25%, 10%);
+		transition: transform 200ms ease-in-out;
+		width: 320px;
+		backdrop-filter: blur(10px);
+		box-shadow: -3px 3px 0px 0px rgba($clr-light-gray, 0.6);
+
+		&.active {
+			transform: translate(-90%, 10%);
+		}
+
+		& ul:last-child {
+			margin-bottom: 2rem;
+		}
+
+		& h5 {
+			font-size: 1rem;
+			color: $clr-white;
+			margin-bottom: 1rem;
+			@include mq(md) {
+				font-size: 1.3rem;
+			}
+		}
+		& li {
+			cursor: pointer;
+			font-size: 0.8rem;
+			padding-block: 0.3rem;
+			padding-left: 1rem;
+			list-style-position: inside;
+			list-style: none;
+			color: $clr-white;
+			font-weight: $fw-light;
+			transition: background-color 100ms ease-in-out;
+			@include mq(md) {
+				font-size: 1rem;
+			}
+			&:hover {
+				list-style: disc;
+				background-color: rgba($clr-white, 0.2);
+			}
 		}
 	}
 }

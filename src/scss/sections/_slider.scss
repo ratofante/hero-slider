@@ -72,6 +72,7 @@ $hero-margins: 1rem;
 		letter-spacing: 5.6px;
 		text-transform: uppercase;
 		margin-bottom: 1rem;
+		text-align: center;
 	}
 
 	.hero-title {
@@ -108,7 +109,7 @@ $hero-margins: 1rem;
 .pointers {
 	position: absolute;
 	bottom: 0;
-	z-index: 60;
+	z-index: 1000;
 	transform: translateY(-13vh);
 	@include flex(row, center, space-between);
 }

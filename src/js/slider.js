@@ -52,16 +52,16 @@ const slider = () => {
             let tl = gsap.timeline();
 
             tl.to(currentSlide, {
-               duration: 1, opacity: 0, x: '-40%', y: '-40%', filter: 'blur(6px)', onComplete: () => {
+               duration: .5, opacity: 0, x: '-40%', y: '-40%', filter: 'blur(6px)', onComplete: () => {
                   currentSlide.classList.toggle('active');
                }
             })
-               .to('.slider-mask', { duration: 1, backdropFilter: 'blur(20px)' }, "<")
+               .to('.slider-mask', { duration: .5, backdropFilter: 'blur(20px)' }, "<")
                .fromTo(newSlide,
                   { opacity: 0, filter: 'blur(6px)', x: '-40%', y: '-40%' },
-                  { duration: 1, x: '-50%', y: '-50%', opacity: 1, filter: 'blur(0px)' }, "<")
+                  { duration: .5, x: '-50%', y: '-50%', opacity: 1, filter: 'blur(0px)' }, "<")
                .to('.slider-mask', {
-                  duration: 2, backdropFilter: 'blur(0px)', onStart: () => {
+                  duration: 1, backdropFilter: 'blur(0px)', onStart: () => {
                      newSlide.classList.toggle('active');
                      e.target.classList.add('active');
                      newBg = getNewBg(e.target.getAttribute('data-pointer'));

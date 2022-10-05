@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="" />
 		<title><%=htmlWebpackPlugin.options.title %></title>
 	</head>
 	<body>
@@ -12,7 +11,7 @@
 			<div class="brand-logo">
 				<img src="./assets/logo-oblack.png" alt="" />
 			</div>
-			<nav>
+			<nav class="top-nav">
 				<ul class="nav-list">
 					<li class="nav-list-item">
 						<a class="nav-link" href="">Inicio</a>
@@ -43,7 +42,32 @@
 						type="text"
 					/>
 				</button>
-				<button class="btn-menu" type="button"></button>
+				<button class="btn-menu open" type="button"></button>
+			</div>
+			<div class="menu">
+				<nav class="menu-nav">
+					<ul>
+						<h5>Sections</h5>
+						<li>Inicio</li>
+						<li>Productos</li>
+						<li>Sobre Barmetal</li>
+						<li>Distribuidores</li>
+						<li>Tiendas</li>
+						<li>Contacto</li>
+					</ul>
+					<ul>
+						<h5>Products</h5>
+						<li>Premium line</li>
+						<li>Deluxe line</li>
+						<li>Categories</li>
+					</ul>
+					<ul>
+						<h5>Brand</h5>
+						<li>Who we are</li>
+						<li>What's new</li>
+						<li>Work with us</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 		<main class="slider">

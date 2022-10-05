@@ -4,15 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="" />
 		<title>Kid - Bootcamp</title>
-	<script defer src="bundle.503c14dcc55cea2b86d3.js"></script></head>
+	<script defer src="bundle.80f02cd5ab5a605f8209.js"></script></head>
 	<body>
 		<header>
 			<div class="brand-logo">
 				<img src="./assets/logo-oblack.png" alt="" />
 			</div>
-			<nav>
+			<nav class="top-nav">
 				<ul class="nav-list">
 					<li class="nav-list-item">
 						<a class="nav-link" href="">Inicio</a>
@@ -43,19 +42,44 @@
 						type="text"
 					/>
 				</button>
-				<button class="btn-menu" type="button"></button>
+				<button class="btn-menu open" type="button"></button>
+			</div>
+			<div class="menu">
+				<nav class="menu-nav">
+					<ul>
+						<h5>Sections</h5>
+						<li>Inicio</li>
+						<li>Productos</li>
+						<li>Sobre Barmetal</li>
+						<li>Distribuidores</li>
+						<li>Tiendas</li>
+						<li>Contacto</li>
+					</ul>
+					<ul>
+						<h5>Products</h5>
+						<li>Premium line</li>
+						<li>Deluxe line</li>
+						<li>Categories</li>
+					</ul>
+					<ul>
+						<h5>Brand</h5>
+						<li>Who we are</li>
+						<li>What's new</li>
+						<li>Work with us</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 		<main class="slider">
-			<div class="slider-bg bg-2"></div>
 			<div class="slider-mask"></div>
 			<section data-slide="1" class="slide">
 				<div class="hero">
-					<h4 class="hero-header">productos exclusivos</h4>
-					<h1 class="hero-title">Premium collection</h1>
+					<h4 class="hero-header">confianza y clase</h4>
+					<h1 class="hero-title">Deluxe collection</h1>
 					<button class="hero-btn">Descubrir</button>
 				</div>
 			</section>
+			<div data-slide="1" class="slider-bg bg-1"></div>
 			<section data-slide="2" class="slide active">
 				<div class="hero">
 					<h4 class="hero-header">productos exclusivos</h4>
@@ -63,13 +87,15 @@
 					<button class="hero-btn">Descubrir</button>
 				</div>
 			</section>
+			<div data-slide="2" class="slider-bg bg-2"></div>
 			<section data-slide="3" class="slide">
 				<div class="hero">
-					<h4 class="hero-header">productos exclusivos</h4>
-					<h1 class="hero-title">Premium collection</h1>
+					<h4 class="hero-header">diseños exclusivos</h4>
+					<h1 class="hero-title">Innovative design</h1>
 					<button class="hero-btn">Descubrir</button>
 				</div>
 			</section>
+			<div data-slide="3" class="slider-bg bg-3"></div>
 			<div class="pointers">
 				<div data-pointer="1" class="pointer"></div>
 				<div data-pointer="2" class="pointer active"></div>
