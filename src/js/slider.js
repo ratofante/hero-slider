@@ -15,9 +15,6 @@ const slider = () => {
       })
       return actualBg;
    }
-   function setNewBg() {
-
-   }
 
    let currentBg = getNewBg(document.querySelector('.slide.active').getAttribute('data-slide'));
 
@@ -68,7 +65,6 @@ const slider = () => {
                      newSlide.classList.toggle('active');
                      e.target.classList.add('active');
                      newBg = getNewBg(e.target.getAttribute('data-pointer'));
-                     console.log(newBg);
                      gsap.fromTo(newBg, { opacity: 0 }, { duration: 1, opacity: 1 })
                   }
                }, "<0.5")
